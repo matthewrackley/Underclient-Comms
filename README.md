@@ -4,6 +4,8 @@
 
 A custom Discord Embedded App SDK communication platform focused on persistent conversations, temporary/private messaging spaces, and streamlined community interaction directly inside Discord voice activities.
 
+Get the App in your server [HERE](https://underclient-comms.s3.us-east-2.amazonaws.com/policies/invite/index.html)!
+
 ## Overview
 
 Underclient Comms is a Discord Embedded App built using the Discord Embedded App SDK, React, TypeScript, and a custom backend architecture.
