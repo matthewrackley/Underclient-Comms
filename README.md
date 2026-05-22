@@ -1,3 +1,4 @@
+<img width="1672" height="941" alt="cover-art" src="https://github.com/user-attachments/assets/8d177e7f-98fd-4e99-8432-90f92af56983" />
 # Underclient Comms
 
 A custom Discord Embedded App SDK communication platform focused on persistent conversations, temporary/private messaging spaces, and streamlined community interaction directly inside Discord voice activities.
