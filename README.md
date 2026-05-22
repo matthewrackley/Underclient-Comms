@@ -20,6 +20,12 @@ The project is designed around:
 
 The application runs inside Discord voice channels through Discord Activities while communicating with an external backend service for authentication, messaging, synchronization, and storage.
 
+### Requirements
+
+In order to make use of the app within a server, it is required that the server install the app and bot to the server. 
+
+The bot is required for accessing the necessary data to pull into the app. Hopefully I can somehow discover a workaround that doesn't require the use of a bot user.
+
 ---
 
 ## Features
