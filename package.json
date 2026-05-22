@@ -1,6 +1,6 @@
 {
-  "name": "discord-chat-app",
-  "version": "0.0.1",
+  "name": "Underclient Comms",
+  "version": "0.1.0-Pre-Release",
   "description": "A discord chatting application that is embedded as an activity",
   "keywords": [
     "chat",
