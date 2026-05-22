@@ -1,0 +1,192 @@
+/*
+ * Global stylesheet for Underclient Comms Terms of Service
+ *
+ * This CSS draws inspiration from the Discord-based
+ * styled-components file provided by the user. It employs a dark
+ * theme with a soft accent color, generous spacing, rounded
+ * corners and subtle shadows to create an attractive and legible
+ * document. Feel free to adjust the color variables below to
+ * suit your own branding.
+ */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+  /* Color palette based on the design system from the uploaded file */
+  --color-background: #0f0f14;
+  --color-surface: #14161f;
+  --color-surface-alt: #1d2030;
+  --color-border: #272b40;
+  --color-accent: #7289da; /* Discord-like blue */
+  --color-accent-hover: #617fec;
+  --color-accent-soft: #889aff;
+  --color-danger: #e05c5c;
+  --color-success: #43b581;
+  --color-text: #f5f5f7;
+  --color-text-muted: #a5a7b8;
+  --color-text-subtle: #6f7083;
+  /* Sizing and spacing */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --shadow-soft: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Global resets */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--color-background);
+  color: var(--color-text);
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: var(--space-lg);
+}
+
+/* Content container */
+.container {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-soft);
+  margin: 0 auto;
+  max-width: 900px;
+  padding: var(--space-lg);
+}
+
+/* Headings */
+h1 {
+  color: var(--color-accent);
+  font-size: 2.25rem;
+  font-weight: 700;
+  margin-bottom: var(--space-sm);
+}
+
+h2 {
+  color: var(--color-accent-soft);
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-top: var(--space-lg);
+  margin-bottom: var(--space-sm);
+  border-left: 4px solid var(--color-accent);
+  padding-left: var(--space-sm);
+}
+
+h3 {
+  color: var(--color-accent-soft);
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-top: var(--space-md);
+  margin-bottom: var(--space-sm);
+}
+
+/* Paragraphs */
+p {
+  margin-top: var(--space-sm);
+  margin-bottom: var(--space-md);
+  line-height: 1.7;
+}
+
+/* Lists */
+ul,
+ol {
+  margin-top: var(--space-sm);
+  margin-bottom: var(--space-md);
+  padding-left: 1.5rem;
+}
+
+li {
+  margin-bottom: var(--space-xs);
+}
+
+/* Inline elements */
+strong {
+  color: var(--color-accent);
+  font-weight: 600;
+}
+
+em {
+  color: var(--color-text-muted);
+}
+
+a {
+  color: var(--color-accent);
+  text-decoration: underline;
+}
+
+div.back-button {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  margin: 0.75rem;
+}
+a.back-button {
+  position: relative;
+  transition: 0.2s;
+}
+a.back-button:hover {
+  cursor: pointer;
+  color: var(--color-accent-hover);
+}
+
+img:hover {
+  cursor: pointer;
+}
+
+.update-date {
+  font-style: italic;
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-md);
+}
+
+/* Blockquote for callouts or notes */
+blockquote {
+  background: var(--color-surface-alt);
+  border-left: 4px solid var(--color-accent);
+  border-radius: var(--radius-md);
+  color: var(--color-text);
+  padding: var(--space-sm) var(--space-md);
+  margin-top: var(--space-md);
+  margin-bottom: var(--space-md);
+}
+
+/* Code or placeholder text */
+.placeholder {
+  color: var(--color-danger);
+  font-style: italic;
+}
+
+/* Table styling (if any tables are added) */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: var(--space-md);
+  margin-bottom: var(--space-md);
+}
+
+th,
+td {
+  border: 1px solid var(--color-border);
+  padding: var(--space-sm);
+  text-align: left;
+}
+
+th {
+  background: var(--color-surface-alt);
+  color: var(--color-accent);
+  font-weight: 600;
+}
+
+tr:nth-child(even) td {
+  background: var(--color-surface-alt);
+}

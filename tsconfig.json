@@ -1,0 +1,81 @@
+{
+  "compilerOptions": {
+    /* =========================
+      JavaScript Environment
+    ========================= */
+    "target": "ES2022",
+    "lib": ["ES2022", "DOM", "DOM.Iterable"],
+
+    /* =========================
+      Module System
+    ========================= */
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+
+    /* =========================
+      React / JSX
+    ========================= */
+    "jsx": "react-jsx",
+
+    /* =========================
+      Project Structure
+    ========================= */
+    "rootDir": "./src",
+    "outDir": "./dist",
+
+    /* =========================
+      TypeScript Behavior
+    ========================= */
+    "strict": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+
+    /* =========================
+      Importing
+    ========================= */
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+
+    /* =========================
+      Output / Emit
+    ========================= */
+    "sourceMap": true,
+    "declaration": false,
+
+    /* =========================
+      Speed / Build
+    ========================= */
+    "skipLibCheck": true,
+    /* =========================
+      File Safety
+    ========================= */
+    "forceConsistentCasingInFileNames": true,
+    "ignoreDeprecations": "6.0",
+    /* =========================
+      Useful Extras
+    ========================= */
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"],
+      "$/*": ["src/server/*"],
+      "#/*": ["dist/client/assets/*"]
+    },
+
+    /* =========================
+      Types
+    ========================= */
+    "types": ["node"],
+    "typeRoots": [
+      "node_modules/@types",
+      "src/types"
+    ]
+  },
+
+  "include": ["src"],
+
+  "exclude": [
+    "node_modules",
+    "dist"
+  ]
+}

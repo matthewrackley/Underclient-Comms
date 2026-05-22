@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-labelledby="title">
+  <title>Home button</title>
+  <defs>
+    <linearGradient id="buttonBg" x1="32" y1="20" x2="224" y2="236" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#3B3F52"/>
+      <stop offset="1" stop-color="#1E1F26"/>
+    </linearGradient>
+
+    <linearGradient id="accent" x1="58" y1="48" x2="202" y2="210" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#5865F2"/>
+      <stop offset="1" stop-color="#8B5CF6"/>
+    </linearGradient>
+
+    <radialGradient id="glow" cx="50%" cy="42%" r="60%">
+      <stop offset="0" stop-color="#5865F2" stop-opacity="0.42"/>
+      <stop offset="1" stop-color="#5865F2" stop-opacity="0"/>
+    </radialGradient>
+
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="14" stdDeviation="13" flood-color="#000000" flood-opacity="0.34"/>
+    </filter>
+  </defs>
+
+  <rect width="256" height="256" rx="64" fill="url(#buttonBg)"/>
+  <circle cx="128" cy="112" r="94" fill="url(#glow)"/>
+  <path d="M57 38h75c36.9 0 67 30.1 67 67v82" fill="none" stroke="#FFFFFF" stroke-opacity="0.055" stroke-width="18" stroke-linecap="round"/>
+
+  <g filter="url(#shadow)">
+    <circle cx="128" cy="128" r="76" fill="url(#accent)"/>
+    
+    <path d="M82 124 128 84l46 40" fill="none" stroke="#F6F7FB" stroke-width="17" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M96 119v47c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12v-47" fill="none" stroke="#F6F7FB" stroke-width="17" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M118 177v-34h20v34" fill="none" stroke="#F6F7FB" stroke-width="15" stroke-linecap="round" stroke-linejoin="round"/>
+
+  </g>
+</svg>

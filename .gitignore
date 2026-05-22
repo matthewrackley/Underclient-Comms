@@ -1,0 +1,9 @@
+node_modules/
+dist/
+certs/
+
+.agents/
+.codex/
+.vscode/
+design/
+.env
