@@ -10,7 +10,7 @@
     "educational",
     "learning"
   ],
-  "license": "MIT",
+  "license": "Proprietary",
   "author": "Matthew Allen Rackley <matthew.rackley17@gmail.com>",
   "type": "module",
   "main": "dist/server/server.cjs",
