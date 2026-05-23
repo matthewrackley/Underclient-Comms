@@ -8,6 +8,7 @@ import path from 'node:path';
 dotenv.config();
 
 const svgPattern = "src/assets/*.svg";
+const pngPattern = "src/client/public/assets/*.png";
 
 /** @type {import("esbuild").BuildOptions} */
 const shared = {
@@ -26,11 +27,10 @@ const shared = {
 };
 
 await rm("dist", { recursive: true, force: true });
-await mkdir("dist/client/terms-of-service", { recursive: true });
-await mkdir("dist/client/privacy-policy", { recursive: true });
+await mkdir("public/terms-of-service", { recursive: true });
+await mkdir("public/privacy-policy", { recursive: true });
 await mkdir("dist/server", { recursive: true });
-await mkdir("dist/client/assets", { recursive: true });
-
+await mkdir("public/assets", { recursive: true });
 /** @type {import("esbuild").BuildOptions} */
 const cjsOptions = {
   ...shared,
@@ -69,10 +69,18 @@ await Promise.all([
 ]);
 
 chmodSync("dist/server/server.cjs", 0o755);
-await copyFile("src/public/index.html", "dist/client/index.html");
-await copyFile("src/public/styles.css", "dist/client/styles.css");
-await copyFile("src/public/terms-of-service.html", "dist/client/terms-of-service/index.html");
-await copyFile("src/public/privacy-policy.html", "dist/client/privacy-policy/index.html");
+await copyFile("src/client/public/index.html", "dist/client/index.html");
+await copyFile("src/client/public/styles.css", "public/assets/styles.css");
+await copyFile("src/client/public/terms-of-service.html", "public/terms-of-service/index.html");
+await copyFile("src/client/public/privacy-policy.html", "public/privacy-policy/index.html");
+await copyFile("src/client/public/invite.html", "public/index.html");
+await copyFile("src/client/public/invite-styles.css", "public/styles.css");
+for await (const filepath of glob(pngPattern)) {
+  const fileName = path.basename(filepath);
+  const destination = path.join("public/assets", fileName);
+
+  await copyFile(filepath, destination);
+}
 for await (const filepath of glob(svgPattern)) {
   const fileName = path.basename(filepath);
   const destination = path.join("dist/client/assets", fileName);

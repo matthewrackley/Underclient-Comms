@@ -13,7 +13,7 @@ interface ServerListProps {
   items: PartialGuild[];
   discord: Discord;
   guildId: string;
-  onSelect: React.Dispatch<React.SetStateAction<string>>;
+  onSelect: React.Dispatch<React.SetStateAction<Snowflake>>;
 }
 
 const Rail = styled.div`

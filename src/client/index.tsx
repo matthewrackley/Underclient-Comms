@@ -1,6 +1,6 @@
 import { createRoot } from 'react-dom/client';
 import React, { useEffect, useState } from 'react';
-import initDiscord from './appClient';
+import { initDiscord } from './api';
 import App from './app';
 import LoadingScreen from '@/client/components/ui/LoadingScreen';
 import ErrorScreen from '@/client/components/ui/ErrorScreen';

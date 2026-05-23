@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
-import guilds from "../api/get";
+import guilds from "@/client/api";
 
-const useGuild = (discord: Discord | null, id?: string) => {
+const useGuild = (discord: Discord | null, id?: Snowflake) => {
   const [guild, setServer] = useState<Guild | null>(discord?.guild || null);
-  const [guildId, setGuildId] = useState<Snowflake>("" as Snowflake);
+  const [guildId, setGuildId] = useState<Snowflake>(id || "" as Snowflake);
 
   useEffect(() => {
     let cancelled = false;
@@ -27,10 +27,10 @@ const useGuild = (discord: Discord | null, id?: string) => {
     };
   }, [discord, guildId]);
 
-  const setGuild: React.Dispatch<React.SetStateAction<string>> = (gid: React.SetStateAction<string>) => {
+  const setGuild: React.Dispatch<React.SetStateAction<Snowflake>> = (gid: React.SetStateAction<Snowflake>) => {
     setGuildId(gid);
   }
-  return [guild, guildId, setGuild] as [Guild, Snowflake, React.Dispatch<React.SetStateAction<string>>];
+  return [guild, guildId, setGuild] as [Guild, Snowflake, React.Dispatch<React.SetStateAction<Snowflake>>];
 };
 
 export default useGuild;
