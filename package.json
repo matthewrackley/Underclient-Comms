@@ -42,7 +42,7 @@
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
     "@types/styled-components": "^5.1.36",
-    "esbuild": "^0.27.7",
+    "esbuild": "^0.28.1",
     "typescript": "^6.0.3"
   }
 }
